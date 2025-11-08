@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BittenForums Hub</title>
+
+<link href="https://fonts.cdnfonts.com/css/vcr-osd-mono" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+<style>
+    
+    .click {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgba(0, 0, 0, 0.95);
+        z-index: 9999;
+        cursor: pointer;
+    }
+
+    .click h1 {
+        color: #fff;
+        font-size: 2.5rem;
+        animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.5; }
+    }
+
+    .click.fade-out {
+        animation: fadeOut 0.8s ease forwards;
+    }
+
+    @keyframes fadeOut {
+        from { opacity: 1; transform: scale(1); }
+        to { opacity: 0; transform: scale(1.1); visibility: hidden; }
+    }
+
+    /* main content */
+    .main-content {
+        opacity: 0;
+        animation: fadeIn 1s ease forwards;
+        animation-delay: 0.8s;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    pre {
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .box-brrr p {
+        white-space: nowrap;
+        text-align: center;
+    }
+
+    .box-brrr {
+        display: flex;
+        flex-direction: column; 
+        align-items: center;    
+        margin-bottom: 20px;
+    }
+
+   
+    .box-brrr a img {
+        transition: transform .25s ease;
+    }
+    .box-brrr a img:hover {
+        transform: scale(1.18);
+    }
+
+    
+    .social-icons {
+        display: flex;
+        gap: 8px;               
+        justify-content: center; 
+        margin-top: 4px;        
+    }
+</style>
+</head>
+
+<body class="center-screen wallpaper">
+
+<div class="click">
+    <h1>ambush</h1>
+</div>
+
+<div class="main-content fade-in-image">
+    <pre>
+______ _ _   _            ______                             
+| ___ (_) | | |           |  ___|                            
+| |_/ /_| |_| |_ ___ _ __ | |_ ___  _ __ _   _ _ __ ___  ___ 
+| ___ \ | __| __/ _ \ '_ \|  _/ _ \| '__| | | | '_ ` _ \/ __|
+| |_/ / | |_| ||  __/ | | | || (_) | |  | |_| | | | | | \__ \
+\____/|_|\__|\__\___|_| |_\_| \___/|_|   \__,_|_| |_| |_|___/
+                                                             
+                                                             
+    </pre>
+
+    <div class="entered">
+        <div class="initial-container">
+            <div class="box-contain">
+
+                
+                <div class="box-brrr">
+                    <img src="/people/duxy.jpg" class="pfp" alt="Duxy PFP">
+                    <h3><span style="color: red;">• </span>Duxy</h3>
+                    <p style="white-space: nowrap;">Admin @ BittenForums</p>
+                    <p style="font-size:10px;">--Socials--</p>
+                    <div class="social-icons">
+                        <a href="https://t.me/bittenforumsofficial" target="_blank" rel="noopener noreferrer">
+                            <img src="/socials/bf.gif" alt="BittenForums" height="30px">
+                        </a>
+                        <a href="https://t.me/holyduxy" target="_blank" rel="noopener noreferrer">
+                            <img src="/socials/Telegram.png" height="30px" alt="Telegram">
+                        </a>
+                    </div>
+                </div>
+
+                
+                <div class="box-brrr">
+                    <img src="/people/Riko.png" class="pfp" alt="Riko PFP">
+                    <h3><span style="color: red;">• </span>Riko</h3>
+                    <p style="white-space: nowrap;">Admin @ BittenForums</p>
+                    <p style="font-size:10px;">--Socials--</p>
+                    <div class="social-icons">
+                        <a href="https://t.me/bittenforumsofficial" target="_blank" rel="noopener noreferrer">
+                            <img src="/socials/bf.gif" alt="BittenForums" height="30px">
+                        </a>
+                        <a href="https://t.me/qs77x" target="_blank" rel="noopener noreferrer">
+                            <img src="/socials/Telegram.png" height="30px" alt="Telegram">
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="text" style="text-align:center;">
+                These are our only socials, beware of impersonators.
+                <br><br>
+                The current active domains are:<br>
+                <a href="https://danger.tn" target="_blank">danger.tn</a>
+                <a href="https://tunisia-live.tn/" target="_blank">tunisia-live.tn</a>
+                <a href="https://fidnord.com" target="_blank">fidnord.com</a>
+                <br><br>
+                
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<audio loop>
+    <source src="/music.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+const clickDiv = document.querySelector('.click');
+const audio = document.querySelector('audio');
+
+clickDiv.addEventListener('click', () => {
+    audio.volume = 0.25;
+    audio.play();
+    clickDiv.classList.add('fade-out');
+    clickDiv.addEventListener('animationend', () => {
+        clickDiv.style.display = 'none';
+    });
+});
+</script>
+
+</body>
+</html>
